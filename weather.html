@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./weater.css">
+    <title>Weather app</title>
+</head>
+<body>
+    <header class="search">
+        <form id="search-form">
+
+            <label for="cityInput">
+                <input id="cityInput" class="input" type="text" placeholder="New York, US" required>
+            </label>
+
+            <button id="search" class="search-btn" type="submit">
+                <svg viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg"> 
+                    <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path> 
+                </svg>
+            </button>
+
+            <button id="geolocation" class="location-btn" type="button"><span>MY LOCATION</span></button>
+
+        </form>
+    </header>
+
+    <div class="field">
+
+        <div id="map" class="google-map"></div>
+
+        <main class="container">
+            <div class="row-wrap">
+                <div id="location" class="location"></div>
+                <div id="temperature"></div>
+            </div>
+            <div id="center" class="center">
+                <div id="image"></div>
+                <p id="no-data">No weather data</p>
+                <div id="cloudiness"></div>
+            </div>
+            <div class="row-wrap">
+                <div id="wind-speed"></div>
+                <div class="sun">
+                    <div id="sunrise"></div>
+                    <div id="sunset"></div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+    <script id="weatherScript"></script>
+    <script type="module" src="../secret.js"></script>
+    <script type="module" src="./weather.js"></script>
+</body>
+</html>
